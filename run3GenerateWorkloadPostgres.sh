@@ -27,7 +27,7 @@ for qt in agg_queries multi_block_queries spj_queries
             tmp_path="${workload_path}/tmp_${query_name}"
             mkdir ${tmp_path}
 
-            ./dsqgen -DIRECTORY "${template_path}/${qt}" -template "${query_name}${ext}" -VERBOSE Y -QUALIFY Y -SCALE ${scale} -DIALECT postgres -OUTPUT_DIR "${tmp_path}" -streams "$streams" -param_dist default -rngseed 997 
+            ./dsqgen -DIRECTORY "${template_path}/${qt}" -template "${query_name}${ext}" -VERBOSE Y -QUALIFY Y -SCALE ${scale} -DIALECT postgres -OUTPUT_DIR "${tmp_path}" -streams "$streams" -param_dist normal -rngseed 997 
 
             mv ${tmp_path} ${wn}
                      
